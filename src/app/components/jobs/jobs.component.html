@@ -1,3 +1,9 @@
-<p>
-  jobs works!
-</p>
+<h2>Jobs</h2>
+
+<ul class="jobs">
+  <li *ngFor="let job of jobs">
+    <a routerLink="/job/{{job.id}}">
+      <span class="badge">{{job.id}}</span> {{job.name}}
+    </a>
+  </li>
+</ul>
