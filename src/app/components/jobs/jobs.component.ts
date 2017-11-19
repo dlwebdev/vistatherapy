@@ -14,7 +14,6 @@ export class JobsComponent implements OnInit {
     constructor(private jobService: JobService) { }
 
     ngOnInit() {
-      console.log('Getting jobs...');
       this.getJobs();
     }
 

@@ -23,7 +23,8 @@ import { MessageService } from './services/message.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [JobService, MessageService],
   bootstrap: [AppComponent]
