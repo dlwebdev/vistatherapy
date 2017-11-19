@@ -1,0 +1,24 @@
+.wrap .content {
+    background: #fff;
+}
+
+main.homepage .hero-section {
+
+}
+
+
+main.homepage .hero-section {
+    background-color: #b38db7;
+    /* background-image: url('VT_Logo.png'); */
+    background-image: url('../../../assets/images/VT_Logo.png');
+    background-position: 0;
+    background-size: 31%;
+    background-repeat: no-repeat;
+}
+
+main.homepage .hero-section {
+    padding: 118px 0 98px;
+    position: relative;
+    z-index: 2;
+    min-height: 350px;
+}
