@@ -6,7 +6,7 @@ main.homepage {
     background-image:
     linear-gradient(
       to right, 
-      #2d2323, #543e6c, #b38db7
+      #b38db7, #543e6c, #24063c 
     );
 }
 
@@ -31,7 +31,6 @@ main.homepage .hero-section {
     color: #FFF;
 }
 
-.hero-container .container div.homepage-search-title {
-    font-weight: bold;
-    font-size: 40px;
+.hero-container .container h1.section-title {
+    font: 100 45px/48px 'Roboto',sans-serif;
 }
