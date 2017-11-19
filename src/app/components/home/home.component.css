@@ -2,13 +2,16 @@
     background: #fff;
 }
 
-main.homepage .hero-section {
-
+main.homepage {
+    background-image:
+    linear-gradient(
+      to right, 
+      #2d2323, #543e6c, #b38db7
+    );
 }
 
 
 main.homepage .hero-section {
-    background-color: #b38db7;
     /* background-image: url('VT_Logo.png'); */
     background-image: url('../../../assets/images/VT_Logo.png');
     background-position: 0;
@@ -21,4 +24,14 @@ main.homepage .hero-section {
     position: relative;
     z-index: 2;
     min-height: 350px;
+}
+
+.hero-container .container {
+    text-align: center;
+    color: #FFF;
+}
+
+.hero-container .container div.homepage-search-title {
+    font-weight: bold;
+    font-size: 40px;
 }
