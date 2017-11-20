@@ -13,13 +13,14 @@ margin-top: 150px;
 
 #jumbotronMessage {
     margin-top:130px;
+    color: #FFF;
 }
 
 .wrap .content {
     background: #fff;
 }
 
-main.homepage {
+#homeJumbotron {
     background-image:
     linear-gradient(
       to right, 
