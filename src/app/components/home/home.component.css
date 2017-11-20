@@ -14,3 +14,40 @@ margin-top: 150px;
 #jumbotronMessage {
     margin-top:130px;
 }
+
+.wrap .content {
+    background: #fff;
+}
+
+main.homepage {
+    background-image:
+    linear-gradient(
+      to right, 
+      #b38db7, #543e6c, #24063c 
+    );
+}
+
+
+main.homepage .hero-section {
+    /* background-image: url('VT_Logo.png'); */
+    background-image: url('../../../assets/images/VT_Logo.png');
+    background-position: 0;
+    background-size: 31%;
+    background-repeat: no-repeat;
+}
+
+main.homepage .hero-section {
+    padding: 118px 0 98px;
+    position: relative;
+    z-index: 2;
+    min-height: 350px;
+}
+
+.hero-container .container {
+    text-align: center;
+    color: #FFF;
+}
+
+.hero-container .container h1.section-title {
+    font: 100 45px/48px 'Roboto',sans-serif;
+}
