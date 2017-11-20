@@ -1,29 +1,36 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
 
-const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
-];
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { JobsComponent } from './components/jobs/jobs.component';
+import { HomeComponent } from './components/home/home.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MessagesComponent } from './components/messages/messages.component';
+import { JobDetailComponent } from './components/job-detail/job-detail.component';
+import { FooterComponent } from './components/footer/footer.component';
+
+import { JobService } from './services/job.service';
+import { MessageService } from './services/message.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    MessagesComponent,
+    JobsComponent,
+    JobDetailComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [JobService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
