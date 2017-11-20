@@ -3,7 +3,7 @@
 <ul class="jobs">
   <li *ngFor="let job of jobs">
     <a routerLink="/job/{{job.id}}">
-      <span class="badge">{{job.id}}</span> {{job.name}}
+      <span class="badge">{{job.id}}</span> {{job.title}}
     </a>
   </li>
 </ul>

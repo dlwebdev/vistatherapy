@@ -1,9 +1,9 @@
 <div *ngIf="job">
-  <h2>{{ job.name | uppercase }} Details</h2>
+  <h2>{{ job.title | uppercase }} Details</h2>
   <div><span>id: </span>{{job.id}}</div>
   <div>
     <label>name:
-      <input [(ngModel)]="job.name" placeholder="name"/>
+      <input [(ngModel)]="job.title" placeholder="Title"/>
     </label>
   </div>
   <button (click)="goBack()">go back</button>
