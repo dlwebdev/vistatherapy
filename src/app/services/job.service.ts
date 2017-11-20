@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
@@ -9,12 +12,16 @@ import { MessageService } from './message.service';
 
 @Injectable()
 export class JobService {
-  constructor(private messageService: MessageService) { }
+  constructor(private http: Http, private messageService: MessageService) { }
 
     getJobs(): Observable<Job[]> {
       // Todo: send the message _after_ fetching the jobs
-      this.messageService.add('JobService: fetched jobs');
-      return of(JOBS);
+      this.messageService.add('JobService: fetching jobs');
+
+      return this.http.get('/api/jobs')
+        .map(res => res.json());
+
+      // return of(JOBS);
     }
 
     getJob(id: number): Observable<Job> {
