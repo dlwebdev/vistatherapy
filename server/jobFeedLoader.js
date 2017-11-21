@@ -17,9 +17,23 @@ JobFeedLoader.loadJobFeed = function () {
             console.dir(result);
             const jobs = result.data.job;
 
-            for(let job of jobs) {
-                 console.log('Job: ', job.profession_c);
+            for(let job of jobs) {                 
                  // save this job
+
+                let jobEntry = new Job({
+                    id: job.id,
+                    profession: job.profession_c,
+                    title: job.job_title_description_c,
+                    location: job.city_for_website_c + ', ' + job.posting_state_c,
+                    description: job.profession_c + ' in ' + job.city_for_website_c + ', ' + job.posting_state_c
+                });
+
+                //console.log("Will save job: ", jobEntry);
+
+                jobEntry.save(function (err, job) {
+                    if (err) console.log('error saving job: ', err);
+                    console.log('Job: ', job);
+                });                 
             }              
         });
     });

@@ -8,7 +8,10 @@ const Schema = mongoose.Schema;
 // Job model
 const jobSchema = new Schema({
   id: String,
-  name: String
+  title: String,
+  profession: String,
+  location: String,
+  description: String
 });
 
 module.exports = mongoose.model('Job', jobSchema);

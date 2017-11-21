@@ -20,13 +20,13 @@ export class JobService {
 
       return this.http.get('/api/jobs')
         .map(res => res.json());
-
-      // return of(JOBS);
     }
 
-    getJob(id: number): Observable<Job> {
+    getJob(id: any): Observable<Job> {
       // Todo: send the message _after_ fetching the hero
       this.messageService.add(`JobService: fetched job id=${id}`);
-      return of(JOBS.find(job => job.id === id));
+
+      return this.http.get('/api/jobs/' + id)
+        .map(res => res.json());
     }
 }

@@ -21,11 +21,12 @@ export class JobDetailComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
-      this.getHero();
+      this.getJob();
     }
 
-    getHero(): void {
-      const id = +this.route.snapshot.paramMap.get('id');
+    getJob(): void {
+      const id = this.route.snapshot.paramMap.get('id');
+
       this.jobService.getJob(id)
         .subscribe(job => this.job = job);
     }
