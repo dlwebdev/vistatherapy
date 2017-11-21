@@ -1,5 +1,6 @@
 #homeJumbotron {
-margin-top: 150px;
+    margin-top: 100px;
+    width: calc(100% + 15px);
 }
 
 #searchForm {
@@ -23,32 +24,32 @@ margin-top: 150px;
 #homeJumbotron {
     background-image:
     linear-gradient(
-      to right, 
-      #019de6, #0079ca, #2b4257 
+      to right,
+      #019de6, #0079ca, #2b4257
     );
 }
 
-
-main.homepage .hero-section {
-    /* background-image: url('VT_Logo.png'); */
-    background-image: url('../../../assets/images/VT_Logo.png');
-    background-position: 0;
-    background-size: 31%;
-    background-repeat: no-repeat;
+#howWeWorkContainer {
+    margin-top: 70px;
 }
 
-main.homepage .hero-section {
-    padding: 118px 0 98px;
-    position: relative;
-    z-index: 2;
-    min-height: 350px;
+#siteBrakedown{
+    margin-top: 70px;
+    background-image:
+    linear-gradient(
+        to right,
+        #2b4257, #0079ca, #019de6
+    );
 }
 
-.hero-container .container {
-    text-align: center;
-    color: #FFF;
+@media (max-width: 767px) {
+    #homeJumbotron {
+        margin-top: 0;
+    }
 }
 
-.hero-container .container h1.section-title {
-    font: 100 45px/48px 'Roboto',sans-serif;
+@media (max-width: 992px) {
+    #jumbotronMessage {
+        margin-top: 0;
+    }
 }
