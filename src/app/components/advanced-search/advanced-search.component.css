@@ -1,0 +1,100 @@
+#advancedSearchForm {
+    margin-top: 110px;
+    padding: 1.5rem;
+    text-align: left;
+    width: 65%;
+}
+
+.custom-control {
+    cursor: pointer;
+}
+
+.custom-control-indicator {
+    top: 0;
+}
+
+#locationDiv {
+    margin-bottom: -5px;
+}
+
+#advancedSearchSubmitBtn {
+    margin-left: 15px;
+}
+
+#clearFormBtn,
+#advancedSearchSubmitBtn {
+    float: right;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    #advancedSearchForm {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    #advancedSearchForm {
+        width: 100%;
+    }
+
+    #advancedSearchSubmitBtn {
+      margin-bottom: 100px;
+      clear: right;
+    }
+
+    #jobTypeCheckboxes{
+        margin-top:1000px;
+    }
+
+    #postDateContainer {
+        margin-top: -8px;
+    }
+}
+
+@media (min-width: 767px) {
+    #postDateContainer {
+        margin-top: -20px;
+    }
+}
+
+#selectField {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.custom-control-indicator[_ngcontent-c3] {
+    cursor: pointer;
+}
+
+#formTitle{
+    margin-bottom: 34px;
+}
+
+#checkboxTitle{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+#jobTypeCheckboxes{
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 300;
+}
+
+#jobTypeCheckboxes{
+    margin: 0 0px 8px 0px;
+}
+
+@media (max-width: 767px) {
+    #jobTypeCheckboxes{
+        margin-top: 23px;
+    }
+}
+
+
+
+
