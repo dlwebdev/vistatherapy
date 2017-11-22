@@ -17,6 +17,9 @@ import { JobService } from './services/job.service';
 import { MessageService } from './services/message.service';
 import { AdvancedSearchComponent } from './components/advanced-search/advanced-search.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSelectModule} from '@angular/material/select';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +33,9 @@ import { AdvancedSearchComponent } from './components/advanced-search/advanced-s
   ],
   imports: [
     BrowserModule,
+    MatSelectModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     HttpModule,
     FormsModule
   ],

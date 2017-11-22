@@ -27,37 +27,6 @@
     cursor: pointer;
 }
 
-@media (max-width: 1000px) {
-    #advancedSearchForm {
-        width: 100%;
-    }
-}
-
-@media (max-width: 767px) {
-    #advancedSearchForm {
-        width: 100%;
-    }
-
-    #advancedSearchSubmitBtn {
-      margin-bottom: 100px;
-      clear: right;
-    }
-
-    #jobTypeCheckboxes{
-        margin-top:1000px;
-    }
-
-    #postDateContainer {
-        margin-top: -8px;
-    }
-}
-
-@media (min-width: 767px) {
-    #postDateContainer {
-        margin-top: -20px;
-    }
-}
-
 #selectField {
     display: block;
     width: 100%;
@@ -89,10 +58,63 @@
     margin: 0 0px 8px 0px;
 }
 
+#jobType .custom-checkbox {
+    margin-top: 10px;
+}
+
+
+.profession-select .mat-select-content, #advancedSearchForm .mat-form-field-infix {
+    width: 410px;
+}
+
+mat-form-field.mat-form-field {
+    font-size: 16px;
+}
+
+.list-group {
+    width: 100%;
+}
+
+.job-card:hover {
+    background: #EEEDED;
+    cursor: pointer;
+}
+
+.card-body {
+    text-align: left;
+}
+
+.pull-left {
+    float: left;
+}
+
+@media (max-width: 1000px) {
+    #advancedSearchForm {
+        width: 100%;
+    }
+}
+
 @media (max-width: 767px) {
     #jobTypeCheckboxes{
         margin-top: 23px;
     }
+
+    #advancedSearchForm {
+        width: 100%;
+    }
+
+    #advancedSearchSubmitBtn {
+      margin-bottom: 100px;
+      clear: right;
+    }
+
+    #jobTypeCheckboxes{
+        margin-top:1000px;
+    }
+
+    #postDateContainer {
+        margin-top: -8px;
+    }    
 }
 
 

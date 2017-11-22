@@ -11,14 +11,14 @@ import { JobService } from '../../services/job.service';
 export class JobsComponent implements OnInit {
   jobs: Job[];
 
-    constructor(private jobService: JobService) { }
+  constructor(private jobService: JobService) { }
 
-    ngOnInit() {
-      this.getJobs();
-    }
+  ngOnInit() {
+    this.getJobs();
+  }
 
-    getJobs(): void {
-      this.jobService.getJobs()
-      .subscribe(jobs => this.jobs = jobs);
-    }
+  getJobs(): void {
+    this.jobService.getJobs()
+    .subscribe(jobs => this.jobs = jobs);
+  }
 }

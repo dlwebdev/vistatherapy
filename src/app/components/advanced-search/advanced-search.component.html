@@ -1,22 +1,43 @@
+<div class="container">
 <form id="advancedSearchForm">
 
     <h3 id="formTitle">Advanced Job Search</h3>
 
+    <pre>
+        Selected Professsion: {{ selectedProfession }}
+    </pre>
+
+    <div class="form-row">
+        <div class="form-group">
+            <mat-form-field>
+                <mat-select panelClass="profession-select" id="profession" name="profession" class="custom-select" [(value)]="selectedProfession" placeholder="Profession">
+                    <mat-option *ngFor="let profession of professions" [value]="profession.id">{{profession.title}}</mat-option>
+                </mat-select>   
+            </mat-form-field>
+        </div>
+    </div>
+
     <div class="form-row">
         <div class="form-group col-md-6">
+            <!--
+                <mat-form-field>
+                    <input matInput placeholder="Input">
+                </mat-form-field>
+            -->
+
             <label for="inputJobTitle">Job Title</label>
-            <input type="text" class="form-control" id="inputJobTitle" placeholder="(e.g. Information Technology)">
+            <input type="text" [(ngModel)]="search.title" class="form-control" id="title" name="title" placeholder="(e.g. Information Technology)">
         </div>
         <div class="form-group col-md-6">
-            <label for="inputCompanies">Companies</label>
-            <input type="text" class="form-control" id="inputCompanies" placeholder="(e.g. Apple Computers)">
+            <label for="inputCompanies">Company</label>
+            <input type="text" [(ngModel)]="search.employer" class="form-control" id="company" name="company" placeholder="(e.g. Apple Computers)">
         </div>
     </div>
 
     <div class="form-row">
         <div id="locationDiv" class="form-group col-md-6 ">
             <label for="inputLocation">Location</label>
-            <input type="text" class="form-control" id="inputLocation" placeholder="(city, state, or zip code)">
+            <input type="text" [(ngModel)]="search.location" class="form-control" id="location" name="location" placeholder="(city, state, or zip code)">
         </div>
 
 
@@ -37,29 +58,14 @@
                     <input type="checkbox" class="custom-control-input">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Part Time</span>
-                </label>
-                <label class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input">
-                    <span class="custom-control-indicator"></span>
-                    <span class="custom-control-description">Internship</span>
-                </label>
-                <label class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input">
-                    <span class="custom-control-indicator"></span>
-                    <span class="custom-control-description">Temp</span>
-                </label>
-                <label class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input">
-                    <span class="custom-control-indicator"></span>
-                    <span class="custom-control-description">Other</span>
-                </label>
+                </label>          
             </div>
         </div>
     </div>
 
-    <div id="postDateContainer" class="form-row">
-        <div class="form-group col-md-6">
-        <label for="selectField">Posting Date</label>
+    <div class="form-row">
+        <div id="postDateContainer" class="form-group col-md-6">
+            <label for="selectField">Posting Date</label>
             <select id="selectField" class="custom-select">
                 <option selected>Last 30 Days</option>
                 <option value="-1">Any Date</option>
@@ -72,7 +78,33 @@
               </select>
         </div>
     </div>
-    <button id="advancedSearchSubmitBtn" type="submit" class="btn btn-primary">Search</button>
 
+    <button id="advancedSearchSubmitBtn" type="submit" class="btn btn-primary">Search</button>
     <button id="clearFormBtn" type="button" class="btn btn-danger">Clear Form</button>
 </form>
+</div>
+
+<div class="clear">&nbsp;</div>
+
+<div class="container">
+
+    <div class="card job-card" *ngFor="let profession of professions">
+        <div class="card-header">
+           <span class="pull-left">{{ profession.title }}</span>
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+            </blockquote>
+        </div>
+    </div>    
+
+    <!--
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-action" *ngFor="let profession of professions">
+            {{ profession.title }}
+        </li>
+    </ul>
+    -->
+</div>
