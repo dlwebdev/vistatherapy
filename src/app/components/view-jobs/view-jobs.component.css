@@ -1,0 +1,32 @@
+#viewJobsContainer{
+    width: 100%;
+    margin: 65px 0 0 0;
+    position: relative;
+}
+
+#sidebar {
+    position: absolute;
+    left:  0;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    margin: 0;
+    padding-top: 50px;
+    color: #FFF;
+
+    background-image:
+    linear-gradient(
+      to right,
+      #019de6, #0079ca, #2b4257
+    );
+}
+
+.nav-link {
+    color: #FFF;
+}
+
+#jobContainer {
+    position: absolute;
+    right:  0;
+    padding:  0;
+}
