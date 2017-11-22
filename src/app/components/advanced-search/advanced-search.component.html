@@ -1,0 +1,78 @@
+<form id="advancedSearchForm">
+
+    <h3 id="formTitle">Advanced Job Search</h3>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputJobTitle">Job Title</label>
+            <input type="text" class="form-control" id="inputJobTitle" placeholder="(e.g. Information Technology)">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputCompanies">Companies</label>
+            <input type="text" class="form-control" id="inputCompanies" placeholder="(e.g. Apple Computers)">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div id="locationDiv" class="form-group col-md-6 ">
+            <label for="inputLocation">Location</label>
+            <input type="text" class="form-control" id="inputLocation" placeholder="(city, state, or zip code)">
+        </div>
+
+
+        <div id="jobTypeCheckboxes" class="form-group col-md-6 ">
+            <label id="checkboxTitle" for="jobType">Job Type</label>
+            <div id="jobType">
+                <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Full Time</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Contract</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Part Time</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Internship</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Temp</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Other</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div id="postDateContainer" class="form-row">
+        <div class="form-group col-md-6">
+        <label for="selectField">Posting Date</label>
+            <select id="selectField" class="custom-select">
+                <option selected>Last 30 Days</option>
+                <option value="-1">Any Date</option>
+                <option value="0">Today</option>
+                <option value="1">Yesterday</option>
+                <option value="3">Last 3 Days</option>
+                <option value="7">Last 7 Days</option>
+                <option value="14">Last 14 Days</option>
+                <option value="30">Last 30 Days</option>
+              </select>
+        </div>
+    </div>
+    <button id="advancedSearchSubmitBtn" type="submit" class="btn btn-primary">Search</button>
+
+    <button id="clearFormBtn" type="button" class="btn btn-danger">Clear Form</button>
+</form>

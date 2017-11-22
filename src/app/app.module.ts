@@ -15,6 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 import { JobService } from './services/job.service';
 import { MessageService } from './services/message.service';
+import { AdvancedSearchComponent } from './components/advanced-search/advanced-search.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MessageService } from './services/message.service';
     FooterComponent,
     MessagesComponent,
     JobsComponent,
-    JobDetailComponent
+    JobDetailComponent,
+    AdvancedSearchComponent
   ],
   imports: [
     BrowserModule,
