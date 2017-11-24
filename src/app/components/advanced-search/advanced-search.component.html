@@ -12,7 +12,7 @@
             <mat-form-field>
                 <mat-select panelClass="profession-select" id="profession" name="profession" class="custom-select" [(value)]="selectedProfession" placeholder="Profession">
                     <mat-option *ngFor="let profession of professions" [value]="profession.id">{{profession.title}}</mat-option>
-                </mat-select>   
+                </mat-select>
             </mat-form-field>
         </div>
     </div>
@@ -25,18 +25,18 @@
                 </mat-form-field>
             -->
 
-            <label for="inputJobTitle">Job Title</label>
+            <label for="title">Job Title</label>
             <input type="text" [(ngModel)]="search.title" class="form-control" id="title" name="title" placeholder="(e.g. Information Technology)">
         </div>
         <div class="form-group col-md-6">
-            <label for="inputCompanies">Company</label>
+            <label for="company">Company</label>
             <input type="text" [(ngModel)]="search.employer" class="form-control" id="company" name="company" placeholder="(e.g. Apple Computers)">
         </div>
     </div>
 
     <div class="form-row">
         <div id="locationDiv" class="form-group col-md-6 ">
-            <label for="inputLocation">Location</label>
+            <label for="location">Location</label>
             <input type="text" [(ngModel)]="search.location" class="form-control" id="location" name="location" placeholder="(city, state, or zip code)">
         </div>
 
@@ -58,7 +58,7 @@
                     <input type="checkbox" class="custom-control-input">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Part Time</span>
-                </label>          
+                </label>
             </div>
         </div>
     </div>
@@ -98,7 +98,7 @@
             <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
             </blockquote>
         </div>
-    </div>    
+    </div>
 
     <!--
     <ul class="list-group">
