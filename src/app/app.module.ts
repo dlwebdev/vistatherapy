@@ -16,7 +16,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { JobService } from './services/job.service';
 import { MessageService } from './services/message.service';
 import { AdvancedSearchComponent } from './components/advanced-search/advanced-search.component';
-import { ViewJobsComponent } from './components/view-jobs/view-jobs.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
@@ -30,8 +29,7 @@ import {MatSelectModule} from '@angular/material/select';
     MessagesComponent,
     JobsComponent,
     JobDetailComponent,
-    AdvancedSearchComponent,
-    ViewJobsComponent
+    AdvancedSearchComponent
   ],
   imports: [
     BrowserModule,

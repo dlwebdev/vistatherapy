@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { JobDetailComponent } from './components/job-detail/job-detail.component';
-import { ViewJobsComponent } from './components/view-jobs/view-jobs.component';
 import { AdvancedSearchComponent } from './components/advanced-search/advanced-search.component';
 
 const routes: Routes = [
@@ -12,7 +11,6 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'job/:id', component: JobDetailComponent },
   { path: 'jobs', component: JobsComponent },
-  { path: 'view-jobs', component: ViewJobsComponent },
   { path: 'advanced-search', component: AdvancedSearchComponent }
 ];
 
