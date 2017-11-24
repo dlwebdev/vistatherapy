@@ -6,6 +6,15 @@
         <div class="card card-body">
             <ul id="dropdownFilterList" class="row">
                 <li>
+                    <mat-form-field>
+                        <mat-select panelClass="profession-select" id="profession" name="profession" class="custom-select" [(value)]="selectedProfession" placeholder="Profession">
+                            <mat-option value="None">None</mat-option>
+                            <mat-option *ngFor="let profession of professions" [value]="profession.title">{{profession.title}}</mat-option>
+                        </mat-select>  
+                    </mat-form-field>
+                    <div class="chosen-profession">{{ selectedProfession }}</div>              
+                </li>              
+                <li>
                     <label for="titleFilter">Title</label>
                     <input type="text" [(ngModel)]="search.title" id="titleFilter" name="titleFilter" placeholder="(e.g. Information Technology)">
                 </li>
@@ -64,6 +73,15 @@
 
         <ul id="filterList" class="row">
             <li>
+                <mat-form-field>
+                    <mat-select panelClass="profession-select" id="profession" name="profession" class="custom-select" [(value)]="selectedProfession" placeholder="Profession">
+                        <mat-option value="None">None</mat-option>
+                        <mat-option *ngFor="let profession of professions" [value]="profession.title">{{profession.title}}</mat-option>
+                    </mat-select>  
+                </mat-form-field>
+                <div class="chosen-profession">{{ selectedProfession }}</div>              
+            </li>
+            <li>
                 <label for="jobTitle">Title</label>
                 <input type="text" id="jobTitle" name="jobTitle" placeholder="(e.g. Information Technology)">
             </li>
@@ -107,7 +125,7 @@
                 </div>
             </li>
         </ul>
-        <button class="btn btn-success">Search</button>
+        <button (click)="doSearch()" class="btn btn-success">Search</button>
         <button class="btn btn-danger">Reset</button>
 
     </div>
