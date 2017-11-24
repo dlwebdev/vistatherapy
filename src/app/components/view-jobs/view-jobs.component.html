@@ -114,9 +114,9 @@
 
     <div id="jobContainer">
 
-        <div class="card job-card" *ngFor="let profession of professions">
+        <div class="card job-card" *ngFor="let job of currentJobsToShow">
             <div class="card-header">
-              <h2 class="cardTitle"><a href="" class="pull-left">{{ profession.title }}</a></h2>
+              <h2 class="cardTitle"><a routerLink="/job/{{job.id}}" class="pull-left">{{ job.title }}</a></h2>
             </div>
             <div class="card-body row">
                 <div class="col-xs-12 col-md-7">
@@ -128,13 +128,6 @@
             </div>
         </div>
 
-        <!--
-        <ul class="list-group">
-            <li class="list-group-item list-group-item-action" *ngFor="let profession of professions">
-                {{ profession.title }}
-            </li>
-        </ul>
-        -->
     </div>
 
 </div>

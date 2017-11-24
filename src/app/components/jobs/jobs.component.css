@@ -1,51 +1,170 @@
-/* jobsComponent's private CSS styles */
-.jobs {
-    margin: 0 0 2em 0;
-    list-style-type: none;
-    padding: 0;
-    width: 15em;
+#viewJobsContainer {
+  width: 100%;
+  margin: 65px 0 0 0;
+  position: relative;
+}
+
+#smallScreenFilter {
+  z-index: 1000;
+  font-size: 14px;
+}
+
+#smallScreenFilter ul {
+  margin: 0 auto;
+  padding: 0;
+  justify-content: space-between;
+}
+
+#smallScreenFilter li {
+  margin: 10px;
+}
+
+#smallScreenFilter label {
+  display: block;
+}
+
+#smallScreenToggle {
+
+}
+
+.arrow-down,
+.arrow-up {
+  display: block;
+}
+
+#filter-content {
+
+}
+
+#dropdownFilterList {
+  list-style: none;
+}
+
+.custom-control-description {
+  font-size: 14px;
+}
+
+#sidebar {
+  position: absolute;
+  left:  0;
+  top: 0;
+  width: 30%;
+  height: 100vh;
+  margin: 0;
+  padding-top: 50px;
+  color: #FFF;
+
+  background-image:
+  linear-gradient(
+    to right,
+    #019de6, #0079ca, #2b4257
+  );
+}
+
+#sidebar label{
+  display: block;
+}
+
+#filterList {
+  list-style: none;
+  margin: 20px auto;
+  padding: 0;
+  font-size: 14px;
+  width: 80%;
+}
+
+#filterList li {
+  margin-bottom: 20px;
+}
+
+#filterList li,
+#filterList input {
+width: 100%;
+}
+
+#jobType,
+#jobTypeBoxes {
+  width: 100%;
+}
+
+.nav-link {
+  color: #FFF;
+}
+
+#jobContainer {
+  position: absolute;
+  right:  0;
+  margin-left:  20px;
+  margin-top: 63px;
+  width: 75%;
+}
+
+.card {
+  width: 100%;
+}
+
+.job-card[_ngcontent-c3]:hover {
+  background: #EEEDED;
+  cursor: pointer;
+}
+
+.job-card:hover {
+  background: rgb(172, 171, 171);
+  cursor: pointer;
+}
+
+#jobContainer row {
+  padding: 0;
+}
+
+.card-body {
+  text-align: left;
+}
+
+.pull-left {
+  float: left;
+}
+
+.cardTitle {
+  font-size: 1.3rem;
+}
+
+.cardJobTitle::before {
+content: "\2014 \A0";
+}
+
+.cardJobTitle {
+    color: #868e96;
+}
+
+.cardPostDate {
+  font-size: .8rem;
+  color: #868e96;
+}
+
+.cardPostDate,
+.cardJobLocation {
+  display: block;
+}
+
+@media (max-width: 660px) {
+  #sidebar {
+      display: none;
   }
-  .jobs li {
-    position: relative;
-    cursor: pointer;
-    background-color: #EEE;
-    margin: .5em;
-    padding: .3em 0;
-    height: 1.6em;
-    border-radius: 4px;
+
+  #jobContainer {
+      width: 100%;
+      margin-top: 0;
   }
-  
-  .jobs li:hover {
-    color: #607D8B;
-    background-color: #DDD;
-    left: .1em;
+
+  .cardTitle {
+      font-size: 1.5rem;
   }
-  
-  .jobs a {
-    color: #888;
-    text-decoration: none;
-    position: relative;
-    display: block;
-    width: 250px;
+}
+
+@media (min-width: 660px) {
+  #smallScreenFilter,
+  #smallScreenFilter-content {
+      display: none;
   }
-  
-  .jobs a:hover {
-    color:#607D8B;
-  }
-  
-  .jobs .badge {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 0.8em 0.7em 0 0.7em;
-    background-color: #607D8B;
-    line-height: 1em;
-    position: relative;
-    left: -1px;
-    top: -4px;
-    height: 1.8em;
-    min-width: 16px;
-    text-align: right;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
-  }
+}
