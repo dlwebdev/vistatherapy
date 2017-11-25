@@ -151,6 +151,12 @@ content: "\2014 \A0";
   display: block;
 }
 
+.pagination-container {
+  position: fixed;
+  bottom: 40px;
+  width: 100%;  
+}
+
 @media (max-width: 767px) {
   #sidebar {
       display: none;

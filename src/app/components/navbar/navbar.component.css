@@ -95,3 +95,6 @@ ul.navbar-nav.mr-auto {
 }
 
 
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
+}

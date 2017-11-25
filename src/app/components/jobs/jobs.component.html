@@ -131,6 +131,12 @@
     </div>
 
     <div id="jobContainer">
+      <!--
+      <pre>
+        Total: {{ total }}        
+        Page: {{ page }}
+      </pre>
+      -->
 
         <div class="card job-card" *ngFor="let job of currentJobsToShow">
             <div class="card-header">
@@ -147,6 +153,18 @@
         </div>
 
     </div>
+
+    <div class="pagination-container">
+        <app-job-pagination
+        (goPage)="goToPage($event)"
+        (goNext)="onNext()"
+        (goPrev)="onPrev()"
+        [pagesToShow]="3"
+        [page]="page"
+        [perPage]="limit"
+        [count]="total">
+      </app-job-pagination> 
+    </div>   
 
 </div>
 
