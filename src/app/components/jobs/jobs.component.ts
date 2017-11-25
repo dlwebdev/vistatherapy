@@ -63,12 +63,13 @@ export class JobsComponent implements OnInit {
     this.currentJobsToShow = this.jobs;
 
     if (this.selectedProfession) {
-      console.log('Filtering....');
       const pro = this.selectedProfession;
       this.currentJobsToShow = this.currentJobsToShow.filter(function (job) {
         return job.profession === pro;
       });
     }
+    this.total = this.currentJobsToShow.length;
+    this.page = 1;
   }
 
   showPageOfJobs(): void {
