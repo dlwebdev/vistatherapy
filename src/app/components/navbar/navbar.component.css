@@ -13,16 +13,23 @@
     margin:0;
 }
 
-.navbar-brand, a.navbar-brand:hover {
-    color: #000;
-    margin-left: 35px;
-    font-size: 35px;
-    font-family: Lato,Helvetica,Arial,sans-serif;
-    font-weight: 100;
+.navbar-brand {
+    height: 100%;
+    margin-left:20px;
+}
+
+.navbar-brand:hover {
+
 }
 
 .navbar-toggler-icon{
     cursor: pointer;
+}
+
+.navbar-collapse {
+    background-color: #FFF;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
 }
 
 ul.navbar-nav.mr-auto {
@@ -30,26 +37,43 @@ ul.navbar-nav.mr-auto {
     margin-left: 30px;
 }
 
+.nav-link {
+    color: #000;
+}
+
 #selectBoxToggle {
     cursor: pointer;
 }
 
 @media (max-width: 767px) {
+  .bg-dark {
+      /*background-color: #fbfcfd !important;*/
+  }
+
   #logoContent {
       background: transparent;
       z-index: 1000;
-      text-align: center;
+      border-bottom: 1px solid #000;
+  }
+
+  .custom-toggler.navbar-toggler {
+      border-color: rgb(0, 0, 0);
+  }
+  .custom-toggler .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, .9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+      z-index: 1001;
   }
 
   .navbar-brand{
       color: #FFF;
+      padding-bottom: 17px;
   }
 
   .navbar-toggler {
-      float: left;
+      float: right;
+      z-index: 1001;
       margin-top: 12px;
-      margin-left: 1px;
-      margin-right: -2em;
+      margin-right: 1px;
       border: none;
   }
 
