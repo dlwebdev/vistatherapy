@@ -157,6 +157,12 @@ content: "\2014 \A0";
   width: 100%;  
 }
 
+#sidebar {
+  position: fixed;
+  background: #fff;
+  font: black;
+}
+
 @media (max-width: 767px) {
   #sidebar {
       display: none;
