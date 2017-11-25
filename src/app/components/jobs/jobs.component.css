@@ -75,6 +75,8 @@
   padding: 0;
   font-size: 14px;
   width: 80%;
+  text-align: left;
+  color: #000;
 }
 
 #filterList li {
@@ -168,14 +170,9 @@ content: "\2014 \A0";
   color: #8d8686;
   font-size: 40px;
 }
-
 @media (max-width: 767px) {
   #sidebar {
       display: none;
-  }
-
-  #smallScreenFilter {
-      margin-top: 65px;
   }
 
   #jobContainer {
@@ -186,7 +183,9 @@ content: "\2014 \A0";
   .cardTitle {
       font-size: 1.5rem;
   }
+  #smallSreenFilter {
 
+  }
 }
 
 @media (min-width: 767px) {
