@@ -75,6 +75,8 @@
   padding: 0;
   font-size: 14px;
   width: 80%;
+  text-align: left;
+  color: #000;
 }
 
 #filterList li {
@@ -151,26 +153,9 @@ content: "\2014 \A0";
   display: block;
 }
 
-.pagination-container {
-  position: fixed;
-  bottom: 40px;
-  width: 100%;  
-}
-
-#sidebar {
-  position: fixed;
-  background: #fff;
-  font: #000;
-  top: 80px;
-}
-
 @media (max-width: 767px) {
   #sidebar {
       display: none;
-  }
-
-  #smallScreenFilter {
-      margin-top: 65px;
   }
 
   #jobContainer {
@@ -181,7 +166,9 @@ content: "\2014 \A0";
   .cardTitle {
       font-size: 1.5rem;
   }
+  #smallSreenFilter {
 
+  }
 }
 
 @media (min-width: 767px) {
