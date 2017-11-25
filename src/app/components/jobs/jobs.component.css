@@ -160,7 +160,8 @@ content: "\2014 \A0";
 #sidebar {
   position: fixed;
   background: #fff;
-  font: black;
+  font: #000;
+  top: 80px;
 }
 
 @media (max-width: 767px) {
