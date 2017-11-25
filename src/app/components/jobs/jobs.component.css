@@ -164,6 +164,11 @@ content: "\2014 \A0";
   top: 80px;
 }
 
+.view-job .material-icons {
+  color: #8d8686;
+  font-size: 40px;
+}
+
 @media (max-width: 767px) {
   #sidebar {
       display: none;

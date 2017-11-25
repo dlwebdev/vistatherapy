@@ -62,7 +62,7 @@ export class JobsComponent implements OnInit {
   doSearch(): void {
     this.currentJobsToShow = this.jobs;
 
-    if (this.selectedProfession) {
+    if (this.selectedProfession && this.selectedProfession !== 'None') {
       const pro = this.selectedProfession;
       this.currentJobsToShow = this.currentJobsToShow.filter(function (job) {
         return job.profession === pro;
