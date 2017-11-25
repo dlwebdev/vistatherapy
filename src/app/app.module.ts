@@ -17,8 +17,9 @@ import { JobService } from './services/job.service';
 import { MessageService } from './services/message.service';
 import { AdvancedSearchComponent } from './components/advanced-search/advanced-search.component';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatSelectModule} from '@angular/material/select';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatSelectModule } from '@angular/material/select';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatSelectModule} from '@angular/material/select';
     MessagesComponent,
     JobsComponent,
     JobDetailComponent,
-    AdvancedSearchComponent
+    AdvancedSearchComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
