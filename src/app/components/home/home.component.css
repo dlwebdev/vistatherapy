@@ -36,11 +36,13 @@
 #siteBrakedown{
     margin-top: 70px;
     padding:1rem;
+    /*
     background-image:
     linear-gradient(
         to right,
         #2b4257, #0079ca, #019de6
     );
+    */
 }
 
 @media (max-width: 767px) {
