@@ -1,5 +1,6 @@
 #advancedSearchForm {
     margin-top: 110px;
+    margin-bottom: 2rem;
     padding: 1.5rem;
     text-align: left;
     width: 65%;
@@ -39,6 +40,7 @@
 }
 
 #formTitle{
+    text-align: center;
     margin-bottom: 34px;
 }
 
@@ -80,18 +82,16 @@ mat-form-field.mat-form-field {
     cursor: pointer;
 }
 
+.job-card:last-of-type {
+    margin-bottom: 100px;
+}
+
 .card-body {
     text-align: left;
 }
 
 .pull-left {
     float: left;
-}
-
-@media (max-width: 1000px) {
-    #advancedSearchForm {
-        width: 100%;
-    }
 }
 
 @media (max-width: 767px) {
@@ -104,18 +104,31 @@ mat-form-field.mat-form-field {
     }
 
     #advancedSearchSubmitBtn {
-      margin-bottom: 100px;
       clear: right;
     }
 
     #jobTypeCheckboxes{
-        margin-top:1000px;
+        margin-top: 1.5rem;
     }
 
     #postDateContainer {
         margin-top: -8px;
-    }    
+    }
 }
+
+@media (min-width: 767px) {
+  #advancedSearchForm {
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+    #advancedSearchForm {
+        width: 100%;
+    }
+}
+
 
 
 
