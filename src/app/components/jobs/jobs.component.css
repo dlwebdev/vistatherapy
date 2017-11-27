@@ -153,6 +153,27 @@ content: "\2014 \A0";
   display: block;
 }
 
+<<<<<<< HEAD
+=======
+.pagination-container {
+  position: fixed;
+  bottom: 40px;
+  width: 100%;  
+}
+
+#sidebar {
+  position: fixed;
+  background: #fff;
+  font: #000;
+  top: 80px;
+}
+
+.view-job .material-icons {
+  color: #8d8686;
+  font-size: 40px;
+}
+
+>>>>>>> b600df44f749913c12fa53d381bb40f0413989d7
 @media (max-width: 767px) {
   #sidebar {
       display: none;
