@@ -7,6 +7,7 @@
 #smallScreenFilter {
   z-index: 1000;
   font-size: 14px;
+  margin-top: 65px;
 }
 
 #smallScreenFilter ul {
@@ -53,6 +54,7 @@
   margin: 0;
   padding-top: 50px;
   color: #FFF;
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
 
   background-image:
   linear-gradient(
@@ -67,6 +69,10 @@
 
 #sidebar label{
   display: block;
+}
+
+#sideba.btn-danger {
+    margin-bottom: 5rem;
 }
 
 #filterList {
@@ -119,6 +125,10 @@ width: 100%;
   cursor: pointer;
 }
 
+.job-card:last-of-type {
+    margin-bottom: 135px;
+}
+
 #jobContainer row {
   padding: 0;
 }
@@ -153,15 +163,10 @@ content: "\2014 \A0";
   display: block;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> da032dd41b483c1a569940f14dc42d54ab9e2034
 .pagination-container {
   position: fixed;
   bottom: 40px;
-  width: 100%;  
+  width: 100%;
 }
 
 #sidebar {
@@ -176,9 +181,6 @@ content: "\2014 \A0";
   font-size: 40px;
 }
 
-<<<<<<< HEAD
->>>>>>> b600df44f749913c12fa53d381bb40f0413989d7
-=======
 .job-detail-backdrop {
   position: absolute;
   top: 0;
@@ -190,15 +192,15 @@ content: "\2014 \A0";
   flex-direction: column;
   justify-content: center;
   resize: vertical;
-  overflow: auto;  
+  overflow: auto;
 }
 
 .job-detail-modal {
   position: relative;
-  background: #fff;  
+  background: #fff;
   margin: 0 auto;
   resize: vertical;
-  overflow: auto;  
+  overflow: auto;
   opacity: 0;
 }
 
@@ -233,7 +235,7 @@ content: "\2014 \A0";
   border-radius: 4px;
   transform: translateY(20px);
   transition: all 0.5s;
-  visibility: hidden; 
+  visibility: hidden;
 }
 
 .job-wrap.active {
@@ -264,10 +266,6 @@ content: "\2014 \A0";
   opacity: 1;
   transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
-
-
-
-
 
 .wrap {
   position: absolute;
@@ -327,12 +325,6 @@ content: "\2014 \A0";
   transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-
-
-
-
-
->>>>>>> da032dd41b483c1a569940f14dc42d54ab9e2034
 @media (max-width: 767px) {
   #sidebar {
       display: none;
@@ -343,12 +335,14 @@ content: "\2014 \A0";
       margin-top: 0;
   }
 
+  .job-card:last-of-type {
+      margin-bottom: 12rem;
+  }
+
   .cardTitle {
       font-size: 1.5rem;
   }
-  #smallSreenFilter {
 
-  }
 }
 
 @media (min-width: 767px) {

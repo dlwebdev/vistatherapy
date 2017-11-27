@@ -46,12 +46,7 @@ ul.navbar-nav.mr-auto {
 }
 
 @media (max-width: 767px) {
-  .bg-dark {
-      /*background-color: #fbfcfd !important;*/
-  }
-
   #logoContent {
-      background: transparent;
       z-index: 1000;
       border-bottom: 1px solid #000;
   }

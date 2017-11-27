@@ -10,10 +10,11 @@
                         <mat-select panelClass="profession-select" id="profession" name="profession" class="custom-select" [(value)]="selectedProfession" placeholder="Profession">
                             <mat-option value="None">None</mat-option>
                             <mat-option *ngFor="let profession of professions" [value]="profession.title">{{profession.title}}</mat-option>
-                        </mat-select>  
+                        </mat-select>
                     </mat-form-field>
-                    <div class="chosen-profession">{{ selectedProfession }}</div>              
-                </li>              
+                    <div class="chosen-profession">{{ selectedProfession }}</div>
+                </li>
+<!--
                 <li>
                     <label for="titleFilter">Title</label>
                     <input type="text" [(ngModel)]="search.title" id="titleFilter" name="titleFilter" placeholder="(e.g. Information Technology)">
@@ -61,6 +62,7 @@
                         </div>
                     </div>
                 </li>
+-->
             </ul>
             <button class="btn btn-success">Search</button>
             <button class="btn btn-danger">Reset</button>
@@ -77,7 +79,7 @@
                     <mat-select panelClass="profession-select" id="profession" name="profession" class="custom-select" [(value)]="selectedProfession" placeholder="Profession">
                         <mat-option value="None">None</mat-option>
                         <mat-option *ngFor="let profession of professions" [value]="profession">{{profession}}</mat-option>
-                    </mat-select>  
+                    </mat-select>
                 </mat-form-field>
                 <!--<div class="chosen-profession">{{ selectedProfession }}</div>-->
             </li>
@@ -135,7 +137,7 @@
     <div id="jobContainer">
       <!--
       <pre>
-        Total: {{ total }}        
+        Total: {{ total }}
         Page: {{ page }}
       </pre>
       -->
@@ -167,8 +169,8 @@
         [page]="page"
         [perPage]="limit"
         [count]="total">
-      </app-job-pagination> 
-    </div>   
+      </app-job-pagination>
+    </div>
 
 </div>
 

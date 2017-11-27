@@ -42,3 +42,17 @@ button {
     background: transparent;
     cursor: pointer;
 }
+
+@media (max-width: 767px) {
+    .description {
+        width: 100%;
+        top: 30%;
+        display: block;
+        left: 0;
+    }
+    .numbers {
+        width: 100%;
+        margin-top: 2rem;
+        display: block;
+    }
+}
