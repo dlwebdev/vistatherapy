@@ -76,11 +76,12 @@
                 <mat-form-field>
                     <mat-select panelClass="profession-select" id="profession" name="profession" class="custom-select" [(value)]="selectedProfession" placeholder="Profession">
                         <mat-option value="None">None</mat-option>
-                        <mat-option *ngFor="let profession of professions" [value]="profession.title">{{profession.title}}</mat-option>
+                        <mat-option *ngFor="let profession of professions" [value]="profession">{{profession}}</mat-option>
                     </mat-select>  
                 </mat-form-field>
-                <div class="chosen-profession">{{ selectedProfession }}</div>              
+                <!--<div class="chosen-profession">{{ selectedProfession }}</div>-->
             </li>
+            <!--
             <li>
                 <label for="jobTitle">Title</label>
                 <input type="text" id="jobTitle" name="jobTitle" placeholder="(e.g. Information Technology)">
@@ -124,6 +125,7 @@
                     </div>
                 </div>
             </li>
+        -->
         </ul>
         <button (click)="doSearch()" class="btn btn-success">Search</button>
         <button class="btn btn-danger">Reset</button>
@@ -138,18 +140,19 @@
       </pre>
       -->
 
-        <div class="card job-card" *ngFor="let job of currentJobsToShow">
+        <div class="card job-card" *ngFor="let job of currentJobsToShow; let i = index;">
+            <!--<div class="card-header" (click)="selectJob(i)">-->
             <div class="card-header">
               <h2 class="cardTitle"><a routerLink="/job/{{job.id}}" class="pull-left">{{ job.title }}</a></h2>
             </div>
             <div class="card-body row">
                 <div class="col-xs-12 col-md-7">
                     <span class="cardJobTitle">Full Time</span>
-                    <p>Job Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <p>{{ job.description }}</p>
                 </div>
-                <div class="col-xs-12 col-md-2"><span class="cardCompanyName"><a href="">Company Name</a></span></div>
-                <div class="col-xs-12 col-md-2"><span class="cardPostDate">3 Days Ago</span><span class="cardJobLocation">Job Location</span></div>
-                <div class="col-xs-12 col-md-1 view-job"><i class="material-icons">add box</i></div>
+                <div class="col-xs-12 col-md-2"><span class="cardCompanyName"><a href="">{{ job.profession }}</a></span></div>
+                <div class="col-xs-12 col-md-2"><span class="cardJobLocation">{{ job.location }}</span></div>
+                <div class="col-xs-12 col-md-1 view-job" (click)="selectJob(i)"><i class="material-icons">add box</i></div>
             </div>
         </div>
 
@@ -170,3 +173,39 @@
 </div>
 
 
+<div class="job-detail-backdrop" *ngIf="selectedJob" (click)="clearSelectedJob">
+    <div class="job-wrap" [ngClass]="{'active': selectedJob }">
+        <div class="job-detail-modal">
+            <div class="job-header">
+                {{ selectedJob.title }}
+            </div>
+            <div class="job-details">
+                <p>{{ selectedJob.location }}</p>
+                <p>{{ selectedJob.description }}</p>
+            </div>
+
+            <button class="mdc-button" (click)="clearSelectedJob()">
+                    Close
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!--
+<div class='wrap job-detail-backdrop' [ngClass]="{'active': selectedJob }" *ngIf="selectedJob">
+    <div class='content'>
+        <div class="job-header">
+            {{ selectedJob.title }}
+        </div>
+        <div class="job-details">
+            <p>{{ selectedJob.location }}</p>
+            <p>{{ selectedJob.description }}</p>
+        </div>
+
+        <button class="mdc-button" (click)="clearSelectedJob()">
+            Close
+        </button>
+    </div>
+</div>
+-->

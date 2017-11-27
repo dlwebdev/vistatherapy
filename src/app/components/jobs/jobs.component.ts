@@ -17,6 +17,7 @@ export class JobsComponent implements OnInit {
   professions: any[];
 
   search: {};
+  selectedJob: {};
 
   selectedProfession = 'None';
 
@@ -30,12 +31,7 @@ export class JobsComponent implements OnInit {
   constructor(private jobService: JobService) { }
 
   ngOnInit() {
-    this.professions = [
-      {id: 0, title: 'Bus Monitor'},
-      {id: 1, title: 'Occupational Therapist'},
-      {id: 2, title: 'Speech Language Pathologist'},
-      {id: 3, title: 'Speech Language Pathologist Assistant'}
-    ];
+    this.professions = [];
 
     this.search = {
       title: '',
@@ -50,12 +46,23 @@ export class JobsComponent implements OnInit {
     console.log('Professions set: ', this.professions);
   }
 
+  getUniqueValuesOfKey(array, key) {
+    return array.reduce(function(carry, item){
+      if (item[key] && !~carry.indexOf(item[key])) {
+        carry.push(item[key]);
+      }
+      return carry;
+    }, []);
+  }
+
   getJobs(): void {
     this.jobService.getJobs()
       .subscribe(jobs => {
         this.jobs = jobs;
         this.currentJobsToShow = jobs.slice(0, this.limit - 1);
         this.total = jobs.length;
+        this.professions = this.getUniqueValuesOfKey(jobs, 'profession').sort();
+        console.log('Professions: ', this.professions);
       });
   }
 
@@ -102,6 +109,16 @@ export class JobsComponent implements OnInit {
       max = this.total;
     }
     return max;
+  }
+
+  selectJob(i: number): void {
+    console.log('Index of job chosen: ', i);
+    this.selectedJob = this.currentJobsToShow[i];
+    console.log('Selected Job: ', this.selectedJob);
+  }
+
+  clearSelectedJob(): void {
+    this.selectedJob = null;
   }
 
 }
