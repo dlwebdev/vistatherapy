@@ -14,6 +14,10 @@
                     </mat-form-field>
                     <div class="chosen-profession">{{ selectedProfession }}</div>
                 </li>
+                <li>
+                  <label for="locationFilter">Location</label>
+                  <input type="text" [(ngModel)]="search.location" id="locationFilter" name="locationFilter" placeholder="(city, state, or zip code)">
+              </li>
 <!--
                 <li>
                     <label for="titleFilter">Title</label>
@@ -82,6 +86,10 @@
                     </mat-select>
                 </mat-form-field>
                 <!--<div class="chosen-profession">{{ selectedProfession }}</div>-->
+            </li>
+            <li>
+                <label for="jobLocation">Location</label>
+                <input type="text" id="jobLocation" name="jobLocation" placeholder="(city, state, or zip code)">
             </li>
             <!--
             <li>
@@ -152,8 +160,7 @@
                     <span class="cardJobTitle">Full Time</span>
                     <p>{{ job.description }}</p>
                 </div>
-                <div class="col-xs-12 col-md-2"><span class="cardCompanyName"><a href="">{{ job.profession }}</a></span></div>
-                <div class="col-xs-12 col-md-2"><span class="cardJobLocation">{{ job.location }}</span></div>
+                <div class="col-xs-12 col-md-4"><span class="cardJobLocation">{{ job.location }}</span></div>
                 <div class="col-xs-12 col-md-1 view-job" (click)="selectJob(i)"><i class="material-icons">add box</i></div>
             </div>
         </div>

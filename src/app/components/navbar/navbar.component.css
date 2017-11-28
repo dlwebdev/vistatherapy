@@ -18,8 +18,11 @@
     margin-left:20px;
 }
 
-.navbar-brand:hover {
-
+#employerBtn {
+    float: right;
+    margin: 8px 1rem;
+    padding: .7rem;
+    border-radius: 2rem;
 }
 
 .navbar-toggler-icon{
@@ -43,6 +46,16 @@ ul.navbar-nav.mr-auto {
 
 #selectBoxToggle {
     cursor: pointer;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
+}
+
+@media (min-width: 767px) {
+    li.nav-item {
+        margin-right: 1rem;
+    }
 }
 
 @media (max-width: 767px) {
@@ -78,18 +91,10 @@ ul.navbar-nav.mr-auto {
 
   .nav-item {
       width: calc(100% + -30px);
-  }
-
-  .nav-item:first-of-type {
-      border-top: 1px solid #FFF;
+      padding: .5rem 0;
   }
 
   .nav-item:not(:last-of-type) {
-      border-bottom: 1px solid #FFF;
+      border-bottom: 1px solid #000;
   }
-}
-
-
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: black;
 }

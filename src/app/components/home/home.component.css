@@ -8,8 +8,8 @@
     margin: 0 auto;
 }
 
-#logoContainer {
-
+#homeSearch {
+  margin-left: .5rem;
 }
 
 #jumbotronMessage {
@@ -30,7 +30,7 @@
 }
 
 #howWeWorkContainer {
-    margin-top: 70px;
+    margin: 7rem auto 9rem auto;
 }
 
 #siteBrakedown{
@@ -58,6 +58,11 @@
 
     #searchForm input {
       margin-top: 1rem;
+    }
+
+    #homeSearch {
+        margin-top: 1rem;
+        margin-left: 0;
     }
 }
 
