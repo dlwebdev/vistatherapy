@@ -20,6 +20,8 @@
 
 #employerBtn {
     float: right;
+    background-color: #ad387f;
+    color: #FFF;
     margin: 8px 1rem;
     padding: .7rem;
     border-radius: 2rem;
