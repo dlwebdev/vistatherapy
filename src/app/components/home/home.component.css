@@ -8,8 +8,8 @@
     margin: 0 auto;
 }
 
-#logoContainer {
-
+#homeSearch {
+  margin-left: .5rem;
 }
 
 #jumbotronMessage {
@@ -25,12 +25,12 @@
     background-image:
     linear-gradient(
       to right,
-      #019de6, #0079ca, #2b4257
+      #bb77a0, #ad387f, #7f1d59
     );
 }
 
 #howWeWorkContainer {
-    margin-top: 70px;
+    margin: 7rem auto 9rem auto;
 }
 
 #siteBrakedown{
@@ -43,6 +43,10 @@
         #2b4257, #0079ca, #019de6
     );
     */
+}
+
+a.btn.btn-secondary {
+    background-color: #ad387e;
 }
 
 @media (max-width: 767px) {
@@ -58,6 +62,11 @@
 
     #searchForm input {
       margin-top: 1rem;
+    }
+
+    #homeSearch {
+        margin-top: 1rem;
+        margin-left: 0;
     }
 }
 
