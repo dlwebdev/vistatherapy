@@ -116,12 +116,12 @@ width: 100%;
 }
 
 .job-card[_ngcontent-c3]:hover {
-  background: #EEEDED;
+  background: #b982a4;
   cursor: pointer;
 }
 
 .job-card:hover {
-  background: rgb(172, 171, 171);
+  background: #b982a4;
   cursor: pointer;
 }
 
