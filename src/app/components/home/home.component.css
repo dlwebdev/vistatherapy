@@ -13,8 +13,10 @@
 }
 
 #jumbotronMessage {
-    margin-top:130px;
+    margin-top: 75px;
     color: #FFF;
+    font-size: 25px;
+    margin-left: 25px;    
 }
 
 .wrap .content {
